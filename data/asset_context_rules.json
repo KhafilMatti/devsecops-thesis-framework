@@ -1,0 +1,137 @@
+{
+  "rules": [
+    {
+      "rule_id": "production-maven-runtime",
+      "description": "Production Maven dependencies are treated as runtime application components.",
+      "priority": 100,
+      "conditions": {
+        "path_contains": [
+          "pom.xml"
+        ],
+        "event_types": [
+          "dependency_vulnerability"
+        ]
+      },
+      "profile": {
+        "environment": "production",
+        "internet_facing": true,
+        "runtime_reachable": true,
+        "business_criticality": "high",
+        "deployment_stage": "runtime",
+        "data_sensitivity": "high",
+        "safety_impact": "high",
+        "operational_disruption": "high",
+        "financial_loss": "high",
+        "regulatory_exposure": "high",
+        "reputational_damage": "high"
+      }
+    },
+    {
+      "rule_id": "docker-build-configuration",
+      "description": "Dockerfile findings are treated as production build and deployment configuration risks.",
+      "priority": 90,
+      "conditions": {
+        "path_contains": [
+          "dockerfile"
+        ],
+        "event_types": [
+          "misconfiguration"
+        ]
+      },
+      "profile": {
+        "environment": "production",
+        "internet_facing": false,
+        "runtime_reachable": true,
+        "business_criticality": "high",
+        "deployment_stage": "build",
+        "data_sensitivity": "medium",
+        "safety_impact": "medium",
+        "operational_disruption": "high",
+        "financial_loss": "medium",
+        "regulatory_exposure": "medium",
+        "reputational_damage": "medium"
+      }
+    },
+    {
+      "rule_id": "healthcare-application",
+      "description": "Repositories or paths containing healthcare indicators receive a healthcare-sensitive profile.",
+      "priority": 80,
+      "conditions": {
+        "keywords": [
+          "patient",
+          "clinical",
+          "hospital",
+          "healthcare",
+          "medical"
+        ]
+      },
+      "profile": {
+        "environment": "production",
+        "internet_facing": true,
+        "runtime_reachable": true,
+        "business_criticality": "critical",
+        "deployment_stage": "runtime",
+        "data_sensitivity": "critical",
+        "safety_impact": "high",
+        "operational_disruption": "high",
+        "financial_loss": "medium",
+        "regulatory_exposure": "high",
+        "reputational_damage": "high"
+      }
+    },
+    {
+      "rule_id": "financial-application",
+      "description": "Repositories or paths containing payment and financial indicators receive a financially critical profile.",
+      "priority": 80,
+      "conditions": {
+        "keywords": [
+          "payment",
+          "banking",
+          "finance",
+          "transaction",
+          "billing"
+        ]
+      },
+      "profile": {
+        "environment": "production",
+        "internet_facing": true,
+        "runtime_reachable": true,
+        "business_criticality": "critical",
+        "deployment_stage": "runtime",
+        "data_sensitivity": "high",
+        "safety_impact": "low",
+        "operational_disruption": "high",
+        "financial_loss": "high",
+        "regulatory_exposure": "high",
+        "reputational_damage": "high"
+      }
+    },
+    {
+      "rule_id": "manufacturing-application",
+      "description": "Repositories or paths containing manufacturing indicators receive an operational-continuity profile.",
+      "priority": 80,
+      "conditions": {
+        "keywords": [
+          "factory",
+          "manufacturing",
+          "production-line",
+          "industrial",
+          "operational-technology"
+        ]
+      },
+      "profile": {
+        "environment": "production",
+        "internet_facing": false,
+        "runtime_reachable": true,
+        "business_criticality": "critical",
+        "deployment_stage": "runtime",
+        "data_sensitivity": "medium",
+        "safety_impact": "high",
+        "operational_disruption": "high",
+        "financial_loss": "high",
+        "regulatory_exposure": "medium",
+        "reputational_damage": "medium"
+      }
+    }
+  ]
+}

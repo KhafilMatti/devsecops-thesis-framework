@@ -1,0 +1,13 @@
+{
+    "sample_size": 100,
+    "kev_count": 50,
+    "non_kev_count": 50,
+    "kev_high_priority_count": 45,
+    "non_kev_high_priority_count": 22,
+    "kev_high_priority_rate": 0.9,
+    "non_kev_high_priority_rate": 0.44,
+    "fisher_odds_ratio": 11.454545454545455,
+    "fisher_p_value": 1.387934965611408e-06,
+    "spearman_rho_priority_epss": -0.495857711536301,
+    "spearman_p_value": 1.556487679049074e-07
+}

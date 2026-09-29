@@ -1,0 +1,6 @@
+multiplier,event_count,repetitions,mean_elapsed_seconds,median_elapsed_seconds,elapsed_standard_deviation,mean_throughput_events_per_second,median_throughput_events_per_second,mean_peak_memory_mb,maximum_peak_memory_mb
+1,18,5,0.003454,0.003426,0.000155,5218.83,5254.52,0.079,0.079
+10,180,5,0.034809,0.035076,0.000871,5173.76,5131.68,0.927,0.927
+50,900,5,0.170766,0.171153,0.001955,5270.91,5258.46,4.717,4.717
+100,1800,5,0.348539,0.344765,0.007535,5166.31,5220.94,9.454,9.454
+500,9000,5,1.751875,1.753498,0.010393,5137.5,5132.6,47.343,47.343

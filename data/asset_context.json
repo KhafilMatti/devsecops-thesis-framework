@@ -1,0 +1,43 @@
+{
+  "default": {
+    "environment": "development",
+    "internet_facing": false,
+    "runtime_reachable": false,
+    "business_criticality": "medium",
+    "deployment_stage": "build",
+    "data_sensitivity": "medium",
+    "safety_impact": "low",
+    "operational_disruption": "medium",
+    "financial_loss": "medium",
+    "regulatory_exposure": "medium",
+    "reputational_damage": "medium"
+  },
+
+  "pom.xml": {
+    "environment": "production",
+    "internet_facing": true,
+    "runtime_reachable": true,
+    "business_criticality": "high",
+    "deployment_stage": "runtime",
+    "data_sensitivity": "high",
+    "safety_impact": "high",
+    "operational_disruption": "high",
+    "financial_loss": "high",
+    "regulatory_exposure": "high",
+    "reputational_damage": "high"
+  },
+
+  "security_tests/Dockerfile": {
+    "environment": "production",
+    "internet_facing": false,
+    "runtime_reachable": true,
+    "business_criticality": "high",
+    "deployment_stage": "build",
+    "data_sensitivity": "medium",
+    "safety_impact": "medium",
+    "operational_disruption": "high",
+    "financial_loss": "medium",
+    "regulatory_exposure": "medium",
+    "reputational_damage": "medium"
+  }
+}

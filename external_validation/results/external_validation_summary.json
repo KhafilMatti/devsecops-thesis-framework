@@ -1,0 +1,9 @@
+{
+  "total_cves": 100,
+  "kev_count": 50,
+  "non_kev_count": 50,
+  "base_kev_p1_p2": 45,
+  "base_kev_capture_rate": 0.9,
+  "adjusted_kev_p1_p2": 6,
+  "adjusted_kev_capture_rate": 0.12
+}

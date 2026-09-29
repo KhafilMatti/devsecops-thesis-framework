@@ -1,0 +1,4 @@
+Model,Accuracy Difference vs Severity,Macro F1 Difference vs Severity
+Severity-only,0.0,0.0
+Context-aware,0.23506493506493498,0.21639818880842654
+Combined,0.3545454545454545,0.3735084780314273
